@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FDFBF7;
+  --foreground: #1A1513;
+  --surface: #FFFEFC;
+  --surface-soft: #FAF6EE;
+  --primary: #E86C1F;
+  --primary-hover: #D35811;
+  --primary-soft: #FFF5EC;
+  --text-primary: #1A1513;
+  --text-secondary: #5A4E47;
+  --text-muted: #786C65;
+  --border: rgba(120, 80, 50, 0.12);
+  --border-subtle: rgba(120, 80, 50, 0.06);
+  --dark-section: #1A1513;
+  --primary-orange: #E86C1F;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  background-color: #FDFBF7;
+}
+
+/* Custom warm scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F1E5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8956F;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E86C1F;
+}
+
+/* Subtle decorative Indian craft patterns - lightweight static dots */
+.bg-mandala-pattern {
+  background-image: radial-gradient(rgba(232, 108, 31, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Warm card styles - crisp solid surfaces without GPU blur shaders */
+.glass-warm {
+  background: #FFFFFF;
+  border: 1px solid rgba(232, 108, 31, 0.14);
+}
+
+.glass-warm-subtle {
+  background: #FFFEFC;
+  border: 1px solid rgba(223, 210, 188, 0.4);
+}
+
+/* Accessible Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
